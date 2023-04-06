@@ -1,7 +1,7 @@
 /* Custom directive for detecting click outside of element */
 Vue.directive('custom-click-outside', {
 	bind: function (el, binding, vnode) {
-		this.event = function (event) {
+		el.clickOutsideEvent = function (event) { 
 		if (!(el == event.target || el.contains(event.target))) {
 			vnode.context[binding.expression](event);
 		}
@@ -673,7 +673,7 @@ Vue.component('mission', {
 			this.isMobile = window.matchMedia('(max-width: 600px)').matches;
 		},	
         hide: function() {
-			this.seen = false;
+			    this.seen = false;
 		}
 	},
 })

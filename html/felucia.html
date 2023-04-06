@@ -32,11 +32,15 @@
 		v-bind:key="mission.name" 
 		v-bind:class="mission.name"
 		v-bind:src="'../media/mission_' +  mission.type + '.png'"
-		@mouseover="isMobile ? null : selectedMission = mission; seen = true"
-        v-custom-click-outside="hide"
+        v-on-click-outside="hide"
+        @click="selectedMission = mission; seen = true"
         >
 		<!--v-click-outside="hide"-->
 		<div v-if="seen" class="description" v-bind:class="'desc_' + selectedMission.position">
+            
+            <div class="mb-3">
+            <p><i class="fa fa-window-close fa-fw topcorner" @click="hide"></i></p>
+            </div>
 			
             <div class="mb-3" v-if="selectedMission.reqs">
 				<p class="h4">Requirements</p>
@@ -133,6 +137,13 @@
   gtag('js', new Date());
 
   gtag('config', 'G-7G9QJXCBX4');
+</script>
+<script type="module" src="" setup lang="ts">
+import { vOnClickOutside } from '@vueuse/components'
+const modal = ref(true)
+function closeModal() {
+  modal.value = false
+}
 </script>
 
 
