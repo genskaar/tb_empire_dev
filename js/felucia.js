@@ -672,9 +672,11 @@ Vue.component('mission', {
 		mq () {
 			this.isMobile = window.matchMedia('(max-width: 600px)').matches;
 		},	
-        hide: function() {
-			this.seen = false;
-		}
+                hide: function() {
+                    if (!this.isMobile){
+			    this.seen = false;
+                    }
+	        }
 	},
 })
 
