@@ -225,6 +225,7 @@ td {
 		min-width: 100%;
 		min-height: 300px;
 		transform: none;
+        max-height: 200%;
 	}
 	.desc_left {
 		left: 0;
