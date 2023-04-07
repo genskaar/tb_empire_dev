@@ -76,6 +76,7 @@ text:hover {
     word-wrap: break-word;
     display: block;
     line-height: 1em;
+    overflow-x: hidden;
 }
 .desc_left {
 	left: 3%;
