@@ -32,10 +32,8 @@
 		v-bind:key="mission.name" 
 		v-bind:class="mission.name"
 		v-bind:src="'../media/mission_' +  mission.type + '.png'"
-        v-on-click-outside="hide"
         @click="selectedMission = mission; seen = true"
         >
-		<!--v-click-outside="hide"-->
 		<div v-if="seen" class="description" v-bind:class="'desc_' + selectedMission.position">
             
             <div class="mb-3">
@@ -138,14 +136,5 @@
 
   gtag('config', 'G-7G9QJXCBX4');
 </script>
-<script type="module" src="" setup lang="ts">
-import { vOnClickOutside } from '@vueuse/components'
-const modal = ref(true)
-function closeModal() {
-  modal.value = false
-}
-</script>
-
-
 </body>
 </html>
