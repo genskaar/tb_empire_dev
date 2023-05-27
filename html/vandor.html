@@ -117,6 +117,7 @@
 				<span v-for="item in selectedMission.rewards">&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;</span>
 			</div>
             <div class="rewards mb-3" v-if="selectedMission.stars">
+                                <h2>Vandor</h2>
 				<p class="h4">Star Requirements</p>
                 <ul>
 				    <li class="text-justify" v-for="item in selectedMission.stars">{{item}}</li>
@@ -125,7 +126,7 @@
 		</div>
 	</div>
 </template>
-<div class="top-left"><a href="main.html" style="color:#FFFFFF;"> <i class="fa fa-home fa-fw"></i>Full Map </a><br>
+<div class="top-left"><a href="main.html" style="vertical-align: text-bottom; margin-left: 10px;"><img src="../media/map-icon.svg" style="width: 2em; height: 0.9em;" /> <a href="main.html" style="color:#FFFFFF;">Full Map</a> / Vandor<br>
 <script src="../js/vue.min.js"></script>
 <script src="../js/vandor.js"></script>
 <!-- Google tag (gtag.js) -->
