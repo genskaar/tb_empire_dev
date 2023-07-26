@@ -407,7 +407,8 @@ Vue.component('mission', {
              {
                 id:74,
                 name: 'Jabba the Hutt',
-                toons: ['gl_jabba','krrsantan','skiff_lando','boba_fett','boushh']
+                toons: ['gl_jabba','krrsantan','skiff_lando','boba_fett','boushh'],
+                video: "https://youtu.be/k_Msldf_jqA?t=165"
              },
              {
                 id:75,
@@ -438,8 +439,9 @@ Vue.component('mission', {
 			 },
 			 {
 				id: 80,
-				name: 'Starkiller',
-				toons: ['emperor_palpatine', 'starkiller', 'mara_jade_teh','visas_marr','barriss_offee']
+				name: 'Palp w/Empire or Starkiller',
+				toons: ['emperor_palpatine', 'starkiller', 'mara_jade_teh','visas_marr','barriss_offee'],
+				video: "https://youtu.be/4qAsN4u5Ejo?t=283"
 				
 			 },
 			 {
@@ -454,8 +456,9 @@ Vue.component('mission', {
              },
              {
 				id: 83,
-				name: 'Gas/Rey 501st',
-				toons: ['general_skywalker', 'ct-21-0408__echo_','ct-7567__rex_','arc_trooper','ct-5555__fives_',]
+				name: 'Rey/Gas 501st',
+				toons: ['gl_rey', 'ct-21-0408__echo_','ct-7567__rex_','arc_trooper','ct-5555__fives_',],
+				video: "https://www.youtube.com/watch?v=PaU-AA1Re3Q"
 				
 			 },
 			 {
@@ -605,7 +608,7 @@ Vue.component('mission', {
 				'Wave 1: 125,000',
                 'Wave 2: 250,000'
 				],
-            preferredSquads: [44,82,83,80],//generic
+            preferredSquads: [83,82,44,80],//generic
 			dangerousEnemies: [39,40],
             reqs: [12],
             notes: [3]

@@ -41,8 +41,8 @@ Vue.component('mission', {
 			},
 			{
 				id: 4,
-				name: 'Night Sisters',
-				toons: ['mother_talzin', 'asajj_ventress', 'nightsister_zombie', 'old_daka', 'nightsister_spirit' ]
+				name: 'Nightsisters',
+				toons: ['mother_talzin', 'asajj_ventress', 'nightsister_zombie', 'old_daka', 'merrin' ]
 			},
 			{
 				id: 5,
@@ -428,24 +428,28 @@ Vue.component('mission', {
              },
              {
                 id:75,
-                name: 'Trio with SEE',
-                toons: ['darth_traya','darth_sion','darth_nihilus','gl_palp','sith_empire_trooper']
+                name: 'Sith with SEE',
+                toons: ['darth_revan','darth_malak','darth_malgus','gl_palp','wat_tambor'],
+                video: "https://youtu.be/p9LAD2WlaoU?t=393S"
              },
              {
                 id:76,
                 name: 'Sith Empire with SEE',
-                toons: ['darth_revan','darth_malak','darth_malgus','gl_palp','wat_tambor']
+                toons: ['darth_revan','darth_malak','darth_malgus','gl_palp','wat_tambor'],
+
              },
              {
 				id: 77,
 				name: 'Galactic Legend Kylo',
-				toons: ['gl_kylo', 'first_order_officer', 'kylo_ren_(unmasked)','general_hux','sith_trooper']
+				toons: ['gl_kylo', 'first_order_officer', 'kylo_ren_(unmasked)','general_hux','sith_trooper'],
+				video: "https://youtu.be/p9LAD2WlaoU?t=572"
 				
 			 },
              {
                 id:78,
                 name: "Doctor Aphra & Droids (variants available)",
-                toons: ['doctoraphra','bt1','triplezero','ig-88','hk-47']
+                toons: ['doctoraphra','bt1','triplezero','ig-88','hk-47'],
+                video: "https://youtu.be/uZxgBx1S91E?t=193"
              },
              {
                 id:79,
@@ -454,14 +458,19 @@ Vue.component('mission', {
              },
              {
                 id:80,
-                name: 'Separatists',
-                toons: [  'general_grievous','jango_fett','count_dooku', 'nute_gunrey','wat_tambor']
+                name: 'GG + Separatists',
+                toons: ['general_grievous','jango_fett','count_dooku', 'nute_gunrey','wat_tambor']
              },
              {
                 id:81,
                 name: 'Empire (Variants Available)',
                 toons: ['emperor_palpatine','darth_vader','royal_guard','admiral_piett','mara_jade_teh']
              },
+             {
+				id: 82,
+				name: 'Trench + Separatists',
+				toons: ['admiral_trench', 'nute_gunrey', 'jango_fett','count_dooku', 'wat_tambor' ],
+			 },
              
 
 
@@ -508,6 +517,8 @@ Vue.component('mission', {
         "Wave 2: Qi'ra (L), Young Han, Cartel Bruiser, Cartel Spy, Cartel Saboteur ",
         "Wave 1: 2x Nightsister Acolyte (L), Nightsister Initiate, Nightsister Zombie, Nightsister Spirit",
         "Wave 2: Mother Talzin (L), Old Daka, Nightsister Acolyte, Nightsister Zombie, Nightsister Spirit", 
+        "Wave 1: Hondo Onaka (L), IG-88, 2x Jabba's Enforcer, Weequay Saboteur",
+        "Wave 2: Maul (L), Qi-ra, Dash Rendar, Cartel Spy, Cartel Bruiser"
 		],
 		platoons: [
         ["Darth Malgus",	"9","Scythe",	"9","TIE/IN Interceptor Prototype",	"8","Lord Vader",	"6","Maul",	"6","Boba Fett, Scion of Jango",	"4","Sith Eternal Emperor",	"4","General Grievous",	"3","Wat Tambor",	"3","Dengar",	"2","Imperial Probe Droid",	"2",
@@ -554,7 +565,8 @@ Vue.component('mission', {
         'Lando\'s Millenium Falcon (7-Star)',//10,
         "Dark Side or Neutral (Relic 7+)",
         "Dark Side or Neutral (Relic 7+), Doctor Aphra",
-        "Empire (Relic 7+)"
+        "Empire (Relic 7+)",
+        "Nightsisters (Relic 7+), Merrin"
         ],
 		platims:[
 		'Phase 6 DS Death Star',//0
@@ -581,7 +593,7 @@ Vue.component('mission', {
 				'Wave 1: 162,500',
                 'Wave 2: 341,250'
 				],
-			preferredSquads: [75,76,77,80],//gen
+			preferredSquads: [75,77,82,80],//gen
 			dangerousEnemies: [38,39],
 			modifiers: [2],
             reqs: [11],
@@ -610,7 +622,7 @@ Vue.component('mission', {
 				'Wave 1: 162,500',
                 'Wave 2: 341,250'
 				],
-				preferredSquads: [75,76,77,80],//gen
+				preferredSquads: [75,77,82,80],//gen
 				dangerousEnemies: [38,39],
 				modifiers: [2],
             reqs: [11],
@@ -627,6 +639,19 @@ Vue.component('mission', {
                '3 Stars: 339,116,667',
                '3 Stars after maximum preload: 180,155,729 ',
             ]
+			}, 
+            {
+			id: 7,
+			name: 'c8',
+			type: 'special2',
+			position: 'right',
+			rewards: [
+				'50 GET2',
+				],
+				preferredSquads: [4],//ns
+				dangerousEnemies: [40,41],
+				modifiers: [2],
+            reqs: [14],
 			}, 
 			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 7","Ships: 7-Star"], requiredToons: [0], platzones: [0,]}
 		],

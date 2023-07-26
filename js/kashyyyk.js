@@ -171,7 +171,8 @@ Vue.component('mission', {
              {
 				id:29,
 				name: 'Jedi Training Rey',
-				toons: ['rey_(jedi_training)', 'c-3po', 'r2-d2', 'finn', 'bb-8'],
+				toons: ['rey_(jedi_training)', 'c-3po', 'r2-d2', 'rey_(scavenger)', 'bb-8'],
+				video: "https://www.youtube.com/watch?v=IRNnaG4W6oU&t=595s"
 				 
 			 },
 			 {
@@ -459,6 +460,11 @@ Vue.component('mission', {
                 name: 'oFinn',
                 toons: ['finn_o', 'rey_(jedi_training)', 'poe_dameron', 'bb-8', 'r2-d2']
              },
+             {
+		id:81,
+		name: 'Saw + Rebel Fighters',
+		toons: ['saw_gerrera', 'jyn_erso', 'cara_dune', 'cassian_andor', 'k-2so']
+	     }
              
 
 
@@ -509,7 +515,9 @@ Vue.component('mission', {
         "Wave 2: Mara Jade (L), 2x Purge Trooper, Stormtrooper Commander, Stormtrooper, Recon Trooper",
         "Wave 2: Imperial Officer (L), Stormtrooper Commander, Stormtrooper, Recon Trooper, Tie Pilot, Scout Trooper",
         "Executrix, Tie Advanced X1, Scythe, Tie Fighter, Tie Interceptor (R)",
-        "Wave 2: Ninth Sister (L), 2x Purge Trooper"
+        "Wave 2: Ninth Sister (L), 2x Purge Trooper",
+        "Wave 1: AT-ST Driver (L), 2x Purge Trooper, Imperial Officer, Recon Trooper",
+        "Wave 2: Stormtrooper Commander (L), Recon Trooper, AT-ST Driver, Purge Trooper, Imperial Officer"
 		],
 		platoons: [
         [        "Ben Solo",	"6","Commander Ahsoka Tano",	"6","Razor Crest",	"6",
@@ -559,10 +567,12 @@ Vue.component('mission', {
         "Empire (Relic 7+)",
         "5x Light Side or Neutral (Relic 7+)",
         "5x Light Side Wookiees (Relic 7+)",//15
-        "Light Side Ships (7-Star), Profundity"
+        "Light Side Ships (7-Star), Profundity",
+        "Rebel Fighter (Relic 7+), Saw Gerrera",
         ],
 		platims:[
 		'Phase 3 LS Kashyyyk (self)',//0
+        'Phase 3 LS Bonus Zeffo',
 		'Phase 4 LS Lothal',
 		'Phase 5 LS Ring of Kafrene',
         'Phase 6 LS Scarif',
@@ -573,7 +583,7 @@ Vue.component('mission', {
 			type: 'fleet',
 			position: 'left',
 			rewards: [
-				'Wave 1: 628,500',
+				'Wave 1: 682,500',
 				],
             preferredSquads: [75],//aphra
 			dangerousEnemies: [43],
@@ -587,7 +597,7 @@ Vue.component('mission', {
 				'Wave 1: 162,500',
                 'Wave 2: 341,250'
 				],
-			preferredSquads: [77,76,78,80],//gen
+			preferredSquads: [77,76,29,78,80,],//gen
 			dangerousEnemies: [40,41],
 			modifiers: [2],
             reqs: [14],
@@ -600,7 +610,7 @@ Vue.component('mission', {
 				'Wave 1: 162,500',
                 'Wave 2: 341,250'
 				],
-            preferredSquads: [76,77,78,79,80],//empire
+            preferredSquads: [76,77,29,78,79,80],//empire
 			dangerousEnemies: [40,42],
             reqs: [14],
             modifiers: [2],
@@ -631,7 +641,20 @@ Vue.component('mission', {
                '3 Stars after maximum preload: 216,413,542 ',
             ]
 			}, 
-			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 7","Ships: 7-Star"], requiredToons: [0], platzones: [0,1,2,3]}
+            {
+			id: 7,
+			name: 'c8',
+			type: 'special2',
+			position: 'right',
+			rewards: [
+				'50 GET2',
+				],
+				preferredSquads: [81],//saw
+				dangerousEnemies: [45,46],
+				modifiers: [2],
+            reqs: [17],
+			}, 
+			{id: 30, name: 'm2', type: 'platoon', position: 'right',preqs:["Characters: Relic 7","Ships: 7-Star"], requiredToons: [0], platzones: [0,1,2,3,4]}
 		],
 		selectedMission: '',
 		seen: false,
